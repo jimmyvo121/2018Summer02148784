@@ -28,6 +28,7 @@
             
             />
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2018 Summer"
@@ -40,6 +41,7 @@
             android:layout_alignParentRight="true"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:onClick="login"
             android:background="@drawable/bt_icon_bg"
             android:layout_margin="10dp"
 
@@ -74,6 +76,7 @@
         <!-- ararar -->
         
         <Button
+            android:id="@+id/activity_tool_demo"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@android:color/transparent"
@@ -90,8 +93,9 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:layout_weight="0.01"
-            />8
+            />
         <Button
+            android:id="@+id/activity_tool_work"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@android:color/transparent"
