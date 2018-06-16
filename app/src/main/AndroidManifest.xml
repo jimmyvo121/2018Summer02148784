@@ -17,7 +17,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.NotificationActivity"></activity>
+        <activity android:name=".activity.NotificationActivity" />
+        <activity android:name=".activity.TestActivity"></activity>
+        <activity android:name=".activity.NinePatchActivity"></activity>
+        <activity android:name=".activity.SingleInstanceActivity"></activity>
+        <activity android:name=".activity.SingleTaskActivity"></activity>
+        <activity android:name=".activity.SingleTopActivity"></activity>
+        <activity android:name=".activity.StandardActivity"></activity>
+        <activity android:name=".activity.ViewPagerActivity"></activity>
+        <activity android:name=".activity.LaunchModeActivity"></activity>
+
+
     </application>
 
 </manifest>
