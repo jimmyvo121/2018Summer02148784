@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         final WorkFragment workFragment = new WorkFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_layout, demoFragment).commit();
 
+
+
         orangeButton.setOnClickListener(new View.OnClickListener()
         {
             @Override

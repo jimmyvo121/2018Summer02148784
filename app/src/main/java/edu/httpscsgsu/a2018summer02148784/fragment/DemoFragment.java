@@ -74,16 +74,16 @@ public class DemoFragment extends Fragment {
             {
                 switch (position)
                 {
-                    case 0:
+                    case 1:
                         //go to activity LaunchMode
                         intent.setClass(getActivity(), LaunchModeActivity.class);
                         startActivity(intent);
                         break;
-                    case 1:
+                    case 2:
                         intent.setClass(getActivity(), ViewPagerActivity.class);
                         startActivity(intent);
                         break;
-                    case 2:
+                    case 3:
                         intent.setClass(getActivity(), NinePatchActivity.class);
                         startActivity(intent);
                         break;
