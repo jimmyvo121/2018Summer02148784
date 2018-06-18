@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.httpscsgsu.a2018summer02148784.R;
+import edu.httpscsgsu.a2018summer02148784.activity.AdvanceListViewActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.IntentAndBundleActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.LaunchModeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
@@ -122,6 +123,11 @@ public class DemoFragment extends Fragment {
                         break;
                     case 6:
                         intent.setClass(getActivity(), NotificationActivity.class);
+                        startActivity(intent);
+                        break;
+
+                    case 7:
+                        intent.setClass(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent);
                         break;
                     default:

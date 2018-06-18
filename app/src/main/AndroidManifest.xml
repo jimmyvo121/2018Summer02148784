@@ -27,7 +27,11 @@
         <activity android:name=".activity.ViewPagerActivity" />
         <activity android:name=".activity.LaunchModeActivity" />
         <activity android:name=".activity.ScaleTypeActivity" />
-        <activity android:name=".activity.IntentAndBundleActivity"></activity>
+        <activity android:name=".activity.IntentAndBundleActivity" />
+        <activity
+            android:name=".activity.AdvanceListViewActivity"
+            android:label="@string/title_activity_advance_list_view"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
