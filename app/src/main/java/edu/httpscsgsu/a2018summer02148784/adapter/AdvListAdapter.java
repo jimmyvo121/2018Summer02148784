@@ -5,13 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.List;
 
 import edu.httpscsgsu.a2018summer02148784.R;
 
 public class AdvListAdapter extends BaseAdapter {
-    private final Context context;
+    private Context context;
     private final LayoutInflater inflater;
     private List<String> list;
     
@@ -38,12 +40,39 @@ public class AdvListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null){
-            convertView = inflater.inflate(R.layout.item_adv_listview,parent,false);
+        ViewHolder holder = new ViewHolder();
 
+        if (convertView == null)
+        {
+            convertView = inflater.inflate(R.layout.item_adv_listview, parent, false);
+            TextView textLeft = convertView.findViewById(R.id.item_advanced_listview_textview_left);
+            TextView textRight = convertView.findViewById(R.id.item_advanced_listview_textview_right);
+            holder.textLeft = textLeft;
+            holder.textRight = textRight;
+            convertView.setTag(holder);
+        }
+        holder = (ViewHolder) convertView.getTag();
+        holder.textLeft.setText(list.get(position));
+        holder.textRight.setText(list.get(position));
+
+        if (position%2 == 0)
+        {
+            holder.textLeft.setVisibility(View.VISIBLE);
+            holder.textRight.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            holder.textLeft.setVisibility(View.INVISIBLE);
+            holder.textRight.setVisibility(View.VISIBLE);
         }
 
-        return null;
+        return convertView;
+    }
+
+    private class ViewHolder
+    {
+        TextView textLeft;
+        TextView textRight;
     }
 
 
