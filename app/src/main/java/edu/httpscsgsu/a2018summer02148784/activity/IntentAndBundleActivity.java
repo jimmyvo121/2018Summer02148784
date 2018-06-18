@@ -20,7 +20,7 @@ public class IntentAndBundleActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("B");
         String bundle_msg = bundle.getString("B_Msg");
-
+        bundle.getSerializable("Base");
         int number = intent.getIntExtra("No",0);
         String msg = intent.getStringExtra("Msg");
         Toast.makeText(this, String.valueOf(number), Toast.LENGTH_SHORT).show();

@@ -20,6 +20,7 @@ import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ScaleTypeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ViewPagerActivity;
 import edu.httpscsgsu.a2018summer02148784.adapter.MainListAdapter;
+import edu.httpscsgsu.a2018summer02148784.bean.Base;
 
 
 /**
@@ -109,9 +110,11 @@ public class DemoFragment extends Fragment {
                         intent.setClass(getActivity(), IntentAndBundleActivity.class);
                         intent.putExtra("Msg","Say Hello!");
                         intent.putExtra("No",10);
+                        Base newBase = new Base();
                         Bundle bundle = new Bundle();
                         bundle.putInt("B_Msg",100);
                         bundle.putString("B_Msg","FromBundle");
+                        bundle.putSerializable("Base", newBase);
                         intent.putExtra("B",bundle);
                         startActivity(intent);
                     default:
