@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="80dp"
     android:background="@color/white"
     >
     <TextView
@@ -16,7 +16,7 @@
         android:layout_centerVertical="true"
         android:hint="left"
         android:background="@drawable/chatfrom_bg_focused"
-        android:gravity="center_vertical|right"/>
+        android:gravity="center_vertical|left"/>
 
     <TextView
         android:id="@+id/item_advanced_listview_textview_right"
@@ -30,6 +30,6 @@
         android:layout_centerVertical="true"
         android:hint="right"
         android:background="@drawable/chatto_bg_focused"
-        android:gravity="center_vertical|left"/>
+        android:gravity="center_vertical|right"/>
 
 </android.support.constraint.ConstraintLayout>

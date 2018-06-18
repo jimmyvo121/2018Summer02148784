@@ -51,9 +51,13 @@ public class AdvListAdapter extends BaseAdapter {
             holder.textRight = textRight;
             convertView.setTag(holder);
         }
+
         holder = (ViewHolder) convertView.getTag();
         holder.textLeft.setText(list.get(position));
         holder.textRight.setText(list.get(position));
+
+        TextView textLeft = convertView.findViewById(R.id.item_advanced_listview_textview_left);
+        TextView textRight = convertView.findViewById(R.id.item_advanced_listview_textview_right);
 
         if (position%2 == 0)
         {

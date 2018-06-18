@@ -9,13 +9,8 @@
    <ListView
        android:id="@+id/adv_listView"
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="Hint"
-        android:text="Text"
-        />
+       android:layout_height="match_parent"
+       android:divider="@null">
 
    </ListView>
 </android.support.design.widget.CoordinatorLayout>
