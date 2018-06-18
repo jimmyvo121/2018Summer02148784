@@ -9,13 +9,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
     <Button
+        android:id="@+id/notifi_small_bt"
+        android:textSize="26sp"
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:text="SmallNoti"
+        />
+        <Button
+            android:id="@+id/notifi_big_bt"
+            android:textSize="26sp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:text="BigNoti"
+            />
+        <Button
+            android:id="@+id/notifi_pic_bt"
+            android:textSize="26sp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:text="PicNoti"
+            />
+
 
     </LinearLayout>
 

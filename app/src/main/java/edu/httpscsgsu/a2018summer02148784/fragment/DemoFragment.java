@@ -17,6 +17,7 @@ import edu.httpscsgsu.a2018summer02148784.R;
 import edu.httpscsgsu.a2018summer02148784.activity.IntentAndBundleActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.LaunchModeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.NotificationActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ScaleTypeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ViewPagerActivity;
 import edu.httpscsgsu.a2018summer02148784.adapter.MainListAdapter;
@@ -72,7 +73,7 @@ public class DemoFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_demo, container, false);
         listView = view.findViewById(R.id.main_demo_listview);
@@ -111,12 +112,18 @@ public class DemoFragment extends Fragment {
                         intent.putExtra("Msg","Say Hello!");
                         intent.putExtra("No",10);
                         Base newBase = new Base();
+                        newBase.setName("Jimmy");
                         Bundle bundle = new Bundle();
                         bundle.putInt("B_Msg",100);
                         bundle.putString("B_Msg","FromBundle");
                         bundle.putSerializable("Base", newBase);
                         intent.putExtra("B",bundle);
                         startActivity(intent);
+                        break;
+                    case 6:
+                        intent.setClass(getActivity(), NotificationActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                 }
             }

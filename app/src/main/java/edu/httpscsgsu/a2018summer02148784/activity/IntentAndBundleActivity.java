@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import edu.httpscsgsu.a2018summer02148784.R;
+import edu.httpscsgsu.a2018summer02148784.bean.Base;
 
 public class IntentAndBundleActivity extends AppCompatActivity {
 
@@ -19,12 +20,18 @@ public class IntentAndBundleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intent_and_bundle);
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("B");
+//        String bundle_msg = bundle.getString("B_Msg");
+//        bundle.getSerializable("Base");
+        Base newBase = (Base) bundle.getSerializable("Base");
+        newBase.getName();
         String bundle_msg = bundle.getString("B_Msg");
-        bundle.getSerializable("Base");
+
         int number = intent.getIntExtra("No",0);
         String msg = intent.getStringExtra("Msg");
         Toast.makeText(this, String.valueOf(number), Toast.LENGTH_SHORT).show();
         tv = findViewById(R.id.intent_tv);
-        tv.setText(bundle_msg);
+//        tv.setText(bundle_msg);
+        tv.setText(newBase.getName());
+
     }
 }
