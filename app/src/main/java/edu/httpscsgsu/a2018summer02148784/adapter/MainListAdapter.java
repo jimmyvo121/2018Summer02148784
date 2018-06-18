@@ -46,7 +46,10 @@ public class MainListAdapter extends BaseAdapter {
         if (convertView == null)
         {
             convertView = inflater.inflate(R.layout.item_listview_main, parent,false);
+            TextView textView = convertView.findViewById(R.id.main_adapter_textview);
+            convertView.setTag(textView);
         }
+
         TextView textView = convertView.findViewById(R.id.main_adapter_textview);
         textView.setText(list.get(position));
 

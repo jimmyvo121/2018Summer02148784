@@ -3,6 +3,7 @@ package edu.httpscsgsu.a2018summer02148784.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
@@ -25,11 +26,22 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public int getCount()
     {
         return fragmentList.size();
+
+    }
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+        return super.instantiateItem(container, position);
     }
 
-    public void updateList(ArrayList<Fragment> list)
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        super.destroyItem(container, position, object);
+    }
+
+    public void updateList(ArrayList<Fragment> fragmentList)
     {
         this.fragmentList = fragmentList;
         notifyDataSetChanged();
     }
+
 }

@@ -90,13 +90,5 @@
             android:background="@android:color/transparent"/>
     </LinearLayout>
 
-    <!--<fragment-->
-        <!--android:id="@+id/activity_main_fragment"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_below="@id/main_title_layout"-->
-        <!--android:layout_above="@id/main_tool_layout"-->
-
-        <!--&gt;</fragment>-->
 
 </RelativeLayout>

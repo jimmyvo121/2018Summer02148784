@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.httpscsgsu.a2018summer02148784.R;
+import edu.httpscsgsu.a2018summer02148784.activity.IntentAndBundleActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.LaunchModeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.ScaleTypeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ViewPagerActivity;
 import edu.httpscsgsu.a2018summer02148784.adapter.MainListAdapter;
 
@@ -37,11 +39,23 @@ public class DemoFragment extends Fragment {
         list.add("LaunchMode");
         list.add("SimpleViewPager");
         list.add("9Patch");
-        list.add("D");
-        list.add("E");
-        list.add("F");
-        list.add("G");
-        list.add("H");
+        list.add("ScaleType");
+        list.add("Intent&Bundle");
+        list.add("Notification");
+        list.add("AdvanceListView");
+        list.add("AdvanceViewPager");
+        list.add("LaunchMode");
+        list.add("RadioGroup");
+        list.add("CheckBox");
+        list.add("Dialogs");
+        list.add("Handler");
+        list.add("Animation");
+        list.add("Animator");
+        list.add("Gesture");
+        list.add("Service&Broadcast");
+        list.add("AudioPlayerMVC");
+        list.add("LoginLogic");
+
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -88,9 +102,18 @@ public class DemoFragment extends Fragment {
                         startActivity(intent);
                         break;
                     case 4:
-
+                        intent.setClass(getActivity(), ScaleTypeActivity.class);
+                        startActivity(intent);
                         break;
-
+                    case 5:
+                        intent.setClass(getActivity(), IntentAndBundleActivity.class);
+                        intent.putExtra("Msg","Say Hello!");
+                        intent.putExtra("No",10);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("B_Msg",100);
+                        bundle.putString("B_Msg","FromBundle");
+                        intent.putExtra("B",bundle);
+                        startActivity(intent);
                     default:
                 }
             }

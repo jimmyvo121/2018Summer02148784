@@ -18,16 +18,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.NotificationActivity" />
-        <activity android:name=".activity.TestActivity"></activity>
-        <activity android:name=".activity.NinePatchActivity"></activity>
-        <activity android:name=".activity.SingleInstanceActivity"></activity>
-        <activity android:name=".activity.SingleTaskActivity"></activity>
-        <activity android:name=".activity.SingleTopActivity"></activity>
-        <activity android:name=".activity.StandardActivity"></activity>
-        <activity android:name=".activity.ViewPagerActivity"></activity>
-        <activity android:name=".activity.LaunchModeActivity"></activity>
-
-
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.NinePatchActivity" />
+        <activity android:name=".activity.SingleInstanceActivity" />
+        <activity android:name=".activity.SingleTaskActivity" />
+        <activity android:name=".activity.SingleTopActivity" />
+        <activity android:name=".activity.StandardActivity" />
+        <activity android:name=".activity.ViewPagerActivity" />
+        <activity android:name=".activity.LaunchModeActivity" />
+        <activity android:name=".activity.ScaleTypeActivity" />
+        <activity android:name=".activity.IntentAndBundleActivity"></activity>
     </application>
 
 </manifest>
