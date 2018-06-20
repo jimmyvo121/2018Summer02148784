@@ -10,23 +10,34 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import edu.httpscsgsu.a2018summer02148784.activity.BaseActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
 import edu.httpscsgsu.a2018summer02148784.fragment.DemoFragment;
 import edu.httpscsgsu.a2018summer02148784.fragment.WorkFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private Button orangeButton;
     private Button pictureButton;
     private Button demoButton;
     private Button workButton;
 
+
+//    @BindView(R.id.main_title_bt_org);
+//    @OnClick(R.id.main_title_bt_org)
+//    public void submit(View view){
+//        toastShort("message");
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+//        setContentView(R.layout.simple_activity);
+//        ButterKnife.bind(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialView();
         setListener();
+
     }
 
     private void initialView()
@@ -60,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+
                 Toast.makeText(MainActivity.this, "Picture Button!", Toast.LENGTH_SHORT).show();
+                startActivity(NinePatchActivity.class);
             }
         });
 

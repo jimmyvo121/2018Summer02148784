@@ -4,21 +4,30 @@ package edu.httpscsgsu.a2018summer02148784.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.httpscsgsu.a2018summer02148784.MainActivity;
 import edu.httpscsgsu.a2018summer02148784.R;
 import edu.httpscsgsu.a2018summer02148784.activity.AdvanceListViewActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.AdvanceViewPagerActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.BaseActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.CheckBoxActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.IntentAndBundleActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.LaunchModeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NotificationActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.Quiz1Activity;
+import edu.httpscsgsu.a2018summer02148784.activity.RadioGroupActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ScaleTypeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.ViewPagerActivity;
 import edu.httpscsgsu.a2018summer02148784.adapter.MainListAdapter;
@@ -46,6 +55,7 @@ public class DemoFragment extends Fragment {
         list.add("Intent&Bundle");
         list.add("Notification");
         list.add("AdvanceListView");
+        list.add("Quiz1");
         list.add("AdvanceViewPager");
         list.add("LaunchMode");
         list.add("RadioGroup");
@@ -130,11 +140,56 @@ public class DemoFragment extends Fragment {
                         intent.setClass(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent);
                         break;
-                    default:
+                    case 8:
+                        intent.setClass(getActivity(), Quiz1Activity.class);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        ((MainActivity)getActivity()).startActivity(AdvanceViewPagerActivity.class);
+                        break;
+                    case 10:
+                        ((MainActivity)getActivity()).startActivity(LaunchModeActivity.class);
+                        break;
+                    case 11:
+                        ((MainActivity)getActivity()).startActivity(RadioGroupActivity.class);
+                        break;
+                    case 115:
+                        ((MainActivity)getActivity()).startActivity(CheckBoxActivity.class);
+                        break;
+                        default:
                 }
             }
         });
         return view;
+
+
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("fragment","ContentFragment: onDestroy");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("fragment","ContentFragment: onStart");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("fragment","ContentFragment: onStop");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("fragment","ContentFragment: onPause");
+    }
+    public void onResume() {
+        super.onResume();
+        Log.d("fragment","ContentFragment: onResume");
     }
 
 }
