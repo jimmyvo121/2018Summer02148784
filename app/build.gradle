@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 // after changing anything in this file sync gradle files using the "sync project with gradle files" button
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 26
     defaultConfig {
         applicationId "edu.httpscsgsu.a2018summer02148784"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 23
         // targeted meant for version "targetSdkVersion 26' mean meant for SDK 26"
         versionCode 1
         versionName "1.0"
@@ -24,11 +24,17 @@ android {
 // to add dependencies find the the two lines at th bottom of the online source
 dependencies {
     // import third parties here/ dependencies
+
+    //butter knife for**
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //**
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

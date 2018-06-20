@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/darker_gray">
+
+
+    <RelativeLayout
+        android:id="@+id/main_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/holo_blue_bright">
+
+        <Button
+            android:id="@+id/main_title_bt_org"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:text="O"
+            android:background="@drawable/button_bg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summer 2018"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
+            />
+
+        <Button
+            android:id="@+id/main_title_bt_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/bt_pic_bg"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/quiz"
+        android:layout_below="@id/main_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="This fragment is used for quiz"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+
+                />
+        </LinearLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/quiz_bt"
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+
+        <LinearLayout
+            android:id="@+id/three_buttons"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="2dp"
+            >
+
+            <Button
+                android:id="@+id/quiz1_bt"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+
+                android:text="Quiz1"
+                android:textSize="25dp"
+
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:layout_marginVertical="2dp"
+                android:background="@android:color/darker_gray"
+                />
+            <Button
+                android:id="@+id/quiz2_bt"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:text="Quiz2"
+                android:textSize="25dp"
+
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:layout_marginVertical="2dp"
+                android:background="@android:color/darker_gray"
+                />
+
+            <Button
+                android:id="@+id/quiz3_bt"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:text="Quiz3"
+                android:textSize="25dp"
+
+
+                /></LinearLayout>
+        <Button
+            android:layout_below="@id/three_buttons"
+            android:id="@+id/quiz_submit_bt"
+            android:gravity="bottom"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_button"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Submit"
+            android:textSize="25dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:gravity="center"
+            android:text="You can do it!"
+            android:background="@android:color/holo_blue_light"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/main_tool_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/main_tool_demo"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:layout_marginVertical="2dp"
+            android:background="@android:color/darker_gray"
+            />
+
+        <Button
+            android:id="@+id/main_tool_work"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Work"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

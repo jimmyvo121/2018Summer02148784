@@ -28,10 +28,16 @@
         <activity android:name=".activity.LaunchModeActivity" />
         <activity android:name=".activity.ScaleTypeActivity" />
         <activity android:name=".activity.IntentAndBundleActivity" />
+        <activity android:name=".activity.Quiz1Activity" />
+        <activity android:name=".activity.BaseActivity" />
         <activity
             android:name=".activity.AdvanceListViewActivity"
             android:label="@string/title_activity_advance_list_view"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activity.AdvanceViewPagerActivity" />
+        <activity android:name=".activity.RadioGroupActivity" />
+        <activity android:name=".activity.CheckBoxActivity" />
+        <activity android:name=".activity.DialogActivity"></activity>
     </application>
 
 </manifest>
