@@ -1,13 +1,17 @@
 package edu.httpscsgsu.a2018summer02148784.fragment;
 
 
+import android.animation.Animator;
+import android.app.Dialog;
 import android.content.Intent;
+import android.gesture.Gesture;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.ListView;
@@ -20,8 +24,12 @@ import edu.httpscsgsu.a2018summer02148784.MainActivity;
 import edu.httpscsgsu.a2018summer02148784.R;
 import edu.httpscsgsu.a2018summer02148784.activity.AdvanceListViewActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.AdvanceViewPagerActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.AnimationActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.AnimatorActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.BaseActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.CheckBoxActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.DialogActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.GestureActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.IntentAndBundleActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.LaunchModeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
@@ -153,10 +161,27 @@ public class DemoFragment extends Fragment {
                     case 11:
                         ((MainActivity)getActivity()).startActivity(RadioGroupActivity.class);
                         break;
+                    case 13:
+                    ((MainActivity)getActivity()).startActivity(DialogActivity.class);
+                    break;
+//                    case 12:
+//                    ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
+//                    break;
+                    case 15:
+                        ((MainActivity)getActivity()).startActivity(AnimationActivity.class);
+                        break;
+                    case 16:
+                        ((MainActivity)getActivity()).startActivity(AnimatorActivity.class);
+                        break;
+                    case 17:
+                        ((MainActivity)getActivity()).startActivity(GestureActivity.class);
+                        break;
                     case 115:
                         ((MainActivity)getActivity()).startActivity(CheckBoxActivity.class);
                         break;
-                        default:
+
+
+                    default:
                 }
             }
         });

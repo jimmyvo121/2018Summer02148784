@@ -1,45 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.CheckBoxActivity">
+    tools:context=".activity.CheckBoxActivity"
+    android:orientation="horizontal"
+    >
 
     <CheckBox
-    android:id="@+id/checkbox1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:text="checkbo1"
-        android:textSize="26sp"
-    />
+        android:id="@+id/checkbox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox1"
+        android:textSize="26sp"/>
     <CheckBox
         android:id="@+id/checkbox2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="checkbo2"
-        android:textSize="26sp"
-
-
-        />
+        android:text="CheckBox2"
+        android:textSize="26sp"/>
     <CheckBox
         android:id="@+id/checkbox3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="checkbo3"
-        android:textSize="26sp"
+        android:text="CheckBox3"
+        android:textSize="26sp"/>
 
-
-        />
-    <CheckBox
-        android:id="@+id/checkSubmit"
+    <Button
+        android:id="@+id/check_submit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Submit"
-        android:textSize="26sp"
+        android:textSize="26sp"/>
 
 
-        />
-
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

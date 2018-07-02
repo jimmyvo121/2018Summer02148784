@@ -1,5 +1,6 @@
 package edu.httpscsgsu.a2018summer02148784.adapter;
 
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -22,8 +23,13 @@ public class AdvancePageAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
-    public int getCount() {
+    public CharSequence getPageTitle(int position) {
         return fragmentList.get(position).first;
+    }
+
+    @Override
+    public int getCount() {
+            return fragmentList.size();
     }
 
 

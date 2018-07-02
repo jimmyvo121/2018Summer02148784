@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,56 +12,55 @@
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:text="radioButton1"
+            android:text="dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_rb1"
+            android:id="@+id/dialog_rb1"
             />
         <RadioButton
-            android:text="radioButton2"
+            android:text="dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_rb2"
+            android:id="@+id/dialog_rb2"
             />
         <RadioButton
-            android:text="radioButton3"
+            android:text="dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_rb3"
+            android:id="@+id/dialog_rb3"
             />
         <RadioButton
-            android:text="radioSumbit"
+            android:text="dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_submit"
+            android:id="@+id/dialog_rb4"
             />
 
         <RadioButton
-            android:text="radioButton1"
+            android:text="dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_rb1"
+            android:id="@+id/dialog_rb5"
             />
         <RadioButton
-            android:text="radioButton2"
+            android:text="dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_rb2"
+            android:id="@+id/dialog_rb6"
             />
         <RadioButton
-            android:text="radioButton3"
+            android:text="Custom_dialogue"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/radio_rb3"
+            android:id="@+id/dialog_custom"
             />
-        <RadioButton
-            android:text="radioSumbit"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/radio_submit"
-            />
+     </RadioGroup>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:text="dialogueSumbit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/dialog_submit"
+        />
 
-
-
-    </RadioGroup>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

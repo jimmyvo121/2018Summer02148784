@@ -1,5 +1,6 @@
 package edu.httpscsgsu.a2018summer02148784.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,22 @@ public class Quiz1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Quiz1Activity.this, "You clicked Quiz one", Toast.LENGTH_SHORT).show();
+            }
+        });
+        quiz2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(Quiz1Activity.this, Quiz2LVActivity.class);
+                startActivity(intent);
+            }
+        });
+        quiz3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(Quiz1Activity.this, Quiz2PVActivity.class);
+                startActivity(intent);
             }
         });
 

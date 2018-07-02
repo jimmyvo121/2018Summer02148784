@@ -9,16 +9,26 @@ import android.widget.Button;
 import edu.httpscsgsu.a2018summer02148784.R;
 
 
-public class SingleInstanceActivity extends AppCompatActivity {
+public class SingleInstanceActivity extends BaseActivity {
     private Button standard;
     private Button singleTop;
     private Button singleTask;
     private Button singleInstance;
 
     @Override
+    protected void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        String msg = intent.getStringExtra("MSG@2");
+        toastShort("msg");
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_instance);
+        Intent intent = getIntent();
+        String msg = intent.getStringExtra("MSG");
+        toastShort(msg);
 
         standard = findViewById(R.id.singleinstance_standard_button);
         singleTop = findViewById(R.id.singleinstance_singletop_button);
@@ -60,5 +70,9 @@ public class SingleInstanceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
+
+
 }

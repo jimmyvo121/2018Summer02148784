@@ -19,7 +19,7 @@ public class AdvListAdapter extends BaseAdapter {
     
 
 
-    public AdvListAdapter(Context context, List<String> list){
+    public  AdvListAdapter(Context context, List<String> list){
         this.context = context;
         this.list = list;
         inflater = (LayoutInflater) context.getSystemService((Context.LAYOUT_INFLATER_SERVICE));

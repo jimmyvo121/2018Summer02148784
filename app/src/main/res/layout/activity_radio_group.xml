@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,14 +28,14 @@
             android:layout_height="60dp"
             android:id="@+id/radio_rb3"
             />
-        <RadioButton
-            android:text="radioSumbit"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/radio_submit"
-            />
-
     </RadioGroup>
 
+    <Button
+        android:layout_alignParentBottom="true"
+        android:text="radioSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/radio_group_bt"
+        />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

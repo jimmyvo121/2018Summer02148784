@@ -8,6 +8,7 @@ import android.widget.RadioGroup;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import edu.httpscsgsu.a2018summer02148784.R;
 
 public class RadioGroupActivity extends BaseActivity{
@@ -17,7 +18,7 @@ public class RadioGroupActivity extends BaseActivity{
     @BindView(R.id.radio_radiogroup )
         RadioGroup radioGroup;
 
-    @onClick(R.id.radio_group_bt)
+    @OnClick(R.id.radio_group_bt)
     public void submit(View view){
         switch(checkedId){
             case R.id.radio_rb1:
@@ -37,7 +38,6 @@ public class RadioGroupActivity extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_radio_group);
         setContentView(R.layout.activity_radio_group);
         ButterKnife.bind(this);
 
