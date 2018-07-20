@@ -21,23 +21,28 @@ public class DialogActivity extends BaseActivity{
         switch (checkedId)
         {
             case R.id.dialog_custom:
-                CustomDialog.ICustomDialogEventListener listener = new CustomDialog.ICustomDialogEventListener() {
+
+                CustomDialog.ICustomDialogEventListener listener =
+                        new CustomDialog.ICustomDialogEventListener() {
                     public void onClickListener(String msg)
                     {
                         toastShort(msg);
                     }
                 };
 
-                CustomDialog dialog = new CustomDialog(this, listener);
+                CustomDialog dialog =
+                        new CustomDialog(DialogActivity.this, listener);
                 dialog.show();
-
                 break;
 
+            default:
         }
     }
 
+
     @BindView(R.id.dialog_radiogroup)
     RadioGroup radioGroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,7 +55,10 @@ public class DialogActivity extends BaseActivity{
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 checkedId = checkedId;
+
             }
+
         });
+
     }
 }

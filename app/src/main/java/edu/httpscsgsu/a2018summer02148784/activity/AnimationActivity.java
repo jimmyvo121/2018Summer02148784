@@ -47,6 +47,15 @@ public class AnimationActivity extends BaseActivity{
     public void set (View view) {
         textView.startAnimation(set);
     }
+    @OnClick( R.id.scale_bt)
+    public void scale (View view) {
+        textView.startAnimation(scale);
+    }
+    @OnClick(R.id.rotate_bt)
+    public void rotate (View view) {
+        textView.startAnimation(rotate);
+    }
+
 
 
     @Override
@@ -61,7 +70,8 @@ public class AnimationActivity extends BaseActivity{
         trans = AnimationUtils.loadAnimation(this,R.anim.anim_trans);
         alpha = AnimationUtils.loadAnimation(this,R.anim.anim_alpha);
         set = AnimationUtils.loadAnimation(this, R.anim.anim_set);
-
+        scale = AnimationUtils.loadAnimation(this,R.anim.anim_scale);
+        rotate = AnimationUtils.loadAnimation(this,R.anim.anim_rotate);
     }
 
 }

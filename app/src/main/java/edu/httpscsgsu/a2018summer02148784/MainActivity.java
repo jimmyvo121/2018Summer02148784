@@ -73,7 +73,7 @@ public class MainActivity extends BaseActivity {
             {
 
                 Toast.makeText(MainActivity.this, "Picture Button!", Toast.LENGTH_SHORT).show();
-                startActivity(NinePatchActivity.class);
+
             }
         });
 

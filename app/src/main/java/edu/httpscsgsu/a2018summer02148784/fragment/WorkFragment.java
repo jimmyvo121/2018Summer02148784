@@ -11,12 +11,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import edu.httpscsgsu.a2018summer02148784.R;
+import edu.httpscsgsu.a2018summer02148784.activity.BaseActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.Quiz1Activity;
 import edu.httpscsgsu.a2018summer02148784.activity.Quiz2LVActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.Quiz2PVActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.Quiz3Activity;
+import edu.httpscsgsu.a2018summer02148784.activity.Quiz5Activity;
+import edu.httpscsgsu.a2018summer02148784.bean.CustomDialog;
 
 public class WorkFragment extends Fragment {
 
@@ -51,9 +59,15 @@ public class WorkFragment extends Fragment {
     private Button quiz1;
     private Button quiz2;
     private Button quiz3;
+    private Button quiz5;
     private Button submit;
 
+
+    private int checkedId;
     ViewPager viewPager;
+
+
+
 
 
     @Override
@@ -65,17 +79,22 @@ public class WorkFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_work, viewGroup, false);
+
         return view;
     }
-
+    @BindView(R.id.quiz4_radioGroup)
+    RadioGroup radioGroup;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstance){
 
-        quiz1 = getView().findViewById(R.id.work1_bt);
-        quiz2 = getView().findViewById(R.id.work2_bt);
-        quiz3 = getView().findViewById(R.id.work3_bt);
-        submit= getView().findViewById(R.id.work_submit_bt);
+        quiz1 = getView().findViewById(R.id.quiz1_bt);
+        quiz2 = getView().findViewById(R.id.quiz2_bt);
+        quiz3 = getView().findViewById(R.id.quiz3_bt);
+        quiz5 = getView().findViewById(R.id.quiz4_bt);
+
+        submit= getView().findViewById(R.id.quiz_submit_bt);
+
         quiz1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,5 +109,26 @@ public class WorkFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        quiz3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), Quiz3Activity.class);
+                startActivity(intent);
+            }
+        });
+        quiz5.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), Quiz5Activity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

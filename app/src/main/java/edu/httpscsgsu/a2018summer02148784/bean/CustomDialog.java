@@ -9,7 +9,7 @@ import android.view.View;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+import edu.httpscsgsu.a2018summer02148784.R;
 
 
 public class CustomDialog extends Dialog {
@@ -26,7 +26,9 @@ public class CustomDialog extends Dialog {
     public CustomDialog(@NonNull Context context, ICustomDialogEventListener listener)
     {
         super(context, R.style.dialog);
+        setContentView(R.layout.dialog_custom);
         //receive the listener from outside
+        ButterKnife.bind(this);
         this.listener = listener;
     }
 

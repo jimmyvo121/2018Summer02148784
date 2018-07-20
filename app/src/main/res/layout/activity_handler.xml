@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.HandlerActivity">
+    android:orientation="vertical"
+    tools:context=".activity.HandlerActivity"
+    android:paddingTop="50dp">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/handler_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:inputType="text"
+        android:cursorVisible="false"
+        android:text="20"
+        android:background="@null"/>
+
+    <Button
+        android:id="@+id/handler_download"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="26sp"
+        android:text="Download"/>
+
+    <Button
+        android:id="@+id/handler_count"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="26sp"
+        android:text="Count"/>
+
+</LinearLayout>

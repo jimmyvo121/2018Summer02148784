@@ -30,6 +30,7 @@ import edu.httpscsgsu.a2018summer02148784.activity.BaseActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.CheckBoxActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.DialogActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.GestureActivity;
+import edu.httpscsgsu.a2018summer02148784.activity.HandlerActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.IntentAndBundleActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.LaunchModeActivity;
 import edu.httpscsgsu.a2018summer02148784.activity.NinePatchActivity;
@@ -164,9 +165,9 @@ public class DemoFragment extends Fragment {
                     case 13:
                     ((MainActivity)getActivity()).startActivity(DialogActivity.class);
                     break;
-//                    case 12:
-//                    ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
-//                    break;
+                    case 14:
+                    ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
+                    break;
                     case 15:
                         ((MainActivity)getActivity()).startActivity(AnimationActivity.class);
                         break;

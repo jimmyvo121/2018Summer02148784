@@ -11,36 +11,64 @@ import android.view.animation.CycleInterpolator;
 
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import butterknife.ButterKnife;
 import edu.httpscsgsu.a2018summer02148784.R;
+import edu.httpscsgsu.a2018summer02148784.util.LogUtil;
 
-public class AnimatorActivity extends BaseActivity {
+public class AnimatorActivity extends BaseActivity
+{
     private ValueAnimator repeatAnimator;
 
-    @BindView(R.id.text_anim)
+    @BindView(R.id.activity_animator_textView)
     TextView textView;
 
-    @OnClick(R.id.animator_trans)
-    public void trans(){
+    @OnClick(R.id.activity_animator_textView)
+    public void textClick(View view)
+    {
+        toastShort("Animator");
+    }
+
+    @OnClick(R.id.activity_animator_start)
+    public void startClick(View view)
+    {
+        repeatAnimator = doAnimatorListener();
+//        repeatAnimator.setStartDelay(3000);
+        repeatAnimator.start();
+    }
+
+    @OnClick(R.id.acivity_animator_cancel)
+    public void cancelClick(View view)
+    {
+        repeatAnimator.cancel();
+        repeatAnimator.removeAllListeners();
+        repeatAnimator.removeAllUpdateListeners();
+    }
+
+    @OnClick(R.id.acivity_animator_trans)
+    public void transClick(View view)
+    {
         ObjectAnimator animator =
                 ObjectAnimator.ofFloat(textView, "translationX", 0, 120); //translationY
         animator.setDuration(2000);
         animator.start();
     }
-    @OnClick(R.id.animator_set)
-    public void scale(){
+
+    @OnClick(R.id.acivity_animator_scale)
+    public void scaleClick(View view)
+    {
         ObjectAnimator animator =
                 ObjectAnimator.ofFloat(textView, "scaleX", 0,3,1,2,5,1); //scaleY
         animator.setDuration(5000);
         animator.start();
     }
-    @OnClick(R.id.animator_color)
-    public void color(){
+
+    @OnClick(R.id.acivity_animator_color)
+    public void colorClick(View view)
+    {
         ObjectAnimator animator =
                 ObjectAnimator.ofInt
                         (textView, "BackgroundColor", 0xffff00ff, 0xffffff00, 0xffff00ff);
@@ -48,8 +76,10 @@ public class AnimatorActivity extends BaseActivity {
         animator.setEvaluator(new ArgbEvaluator());
         animator.start();
     }
-    @OnClick(R.id.animator_char)
-    public void charFAnim(){
+
+    @OnClick(R.id.acivity_animator_char)
+    public void charClick(View view)
+    {
         ValueAnimator animator =
                 ValueAnimator.ofObject
                         (new CharEvaluator(),new Character('A'),new Character('Z'));
@@ -64,14 +94,18 @@ public class AnimatorActivity extends BaseActivity {
         animator.setInterpolator(new AccelerateInterpolator());
         animator.start();
     }
-    @OnClick(R.id.animator_alpha)
-    public void alpha(){
+
+    @OnClick(R.id.acivity_animator_alpha)
+    public void alphaClick(View view)
+    {
         ObjectAnimator animator = ObjectAnimator.ofFloat(textView,"alpha",1,0,1);
         animator.setDuration(2000);
         animator.start();
     }
-    @OnClick(R.id.animator_rotation)
-    public void rotation(){
+
+    @OnClick(R.id.acivity_animator_rotation)
+    public void rotationClick(View view)
+    {
         ObjectAnimator animator = ObjectAnimator.ofFloat(textView,"rotationY",0,360,0);//rotationX   rotationY
         animator.setDuration(4000);
         animator.setInterpolator(new AccelerateInterpolator());
@@ -80,70 +114,55 @@ public class AnimatorActivity extends BaseActivity {
         animator.start();
     }
 
-    @OnClick(R.id.anim_start_bt)
-    public void startAnimator(){
-        repeatAnimator = doAnimatorListener();
-//        repeatAnimator.setStartDelay(3000);
-        repeatAnimator.start();
-    }
-
-    @OnClick(R.id.anim_cancel_bt)
-    public void cancleAnimator(){
-        repeatAnimator.cancel();
-        repeatAnimator.removeAllListeners();
-        repeatAnimator.removeAllUpdateListeners();
-    }
-
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animator);
+        ButterKnife.bind(this);
     }
-    private ValueAnimator doAnimatorListener() {
-        ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 400);
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+    private ValueAnimator doAnimatorListener(){
+        ValueAnimator animator = ValueAnimator.ofInt(0,400);
+
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                int curValue = (int) animation.getAnimatedValue();
-                textView.layout(textView.getLeft(), curValue, textView.getRight(), curValue + textView.getHeight());
-
+                int curValue = (int)animation.getAnimatedValue();
+                textView.layout(textView.getLeft(),curValue,textView.getRight(),curValue+textView.getHeight());
             }
         });
-        valueAnimator.addListener(new Animator.AnimatorListener() {
+        animator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
-                AnimatorActivity.this.toastShort("Start");
+                toastShort("Started");
+                LogUtil.LogD("Yan","animation start");
             }
-
             @Override
             public void onAnimationEnd(Animator animation) {
-                AnimatorActivity.this.toastShort("end");
-
+                toastShort("Ended");
+                LogUtil.LogD("Yan","animation end");
             }
-
             @Override
             public void onAnimationCancel(Animator animation) {
-                AnimatorActivity.this.toastShort("cancel");
-
+                toastShort("Canceled");
+                LogUtil.LogD("Yan","animation cancel");
             }
-
             @Override
             public void onAnimationRepeat(Animator animation) {
-                AnimatorActivity.this.toastShort("repeat");
-
+                toastShort("Repeated");
+                LogUtil.LogD("Yan","animation repeat");
             }
-
-
         });
-        valueAnimator.setRepeatMode(ValueAnimator.REVERSE);
-        valueAnimator.setRepeatCount(2);
+        animator.setRepeatMode(ValueAnimator.REVERSE);
+        animator.setRepeatCount(2);
 //        animator.setInterpolator(new CycleInterpolator(10));
-        valueAnimator.setDuration(2000);
+        animator.setDuration(2000);
+        return animator;
+    }
 
-        return valueAnimator;
-
-    } private class CharEvaluator implements TypeEvaluator<Character> {
+    private class CharEvaluator implements TypeEvaluator<Character>
+    {
         @Override
         public Character evaluate(float fraction, Character startValue, Character endValue) {
             int startInt  = (int)startValue;
@@ -153,6 +172,7 @@ public class AnimatorActivity extends BaseActivity {
             return result;
         }
     }
+
     public class ArgbEvaluator implements TypeEvaluator {
         public Object evaluate(float fraction, Object startValue, Object endValue) {
             int startInt = (Integer) startValue;

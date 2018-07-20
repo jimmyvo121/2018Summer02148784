@@ -11,11 +11,12 @@ import android.widget.Toast;
 
 import edu.httpscsgsu.a2018summer02148784.R;
 
-public class Quiz1Activity extends AppCompatActivity {
+public class Quiz1Activity extends BaseActivity {
 
     private Button quiz1;
     private Button quiz2;
     private Button quiz3;
+    private Button quiz4;
     private Button submit;
 
     ViewPager viewPager;
@@ -46,9 +47,11 @@ public class Quiz1Activity extends AppCompatActivity {
         quiz3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                toastShort("quiz 3");
                 Intent intent = new Intent();
                 intent.setClass(Quiz1Activity.this, Quiz2PVActivity.class);
                 startActivity(intent);
+
             }
         });
 

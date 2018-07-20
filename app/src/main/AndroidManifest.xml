@@ -23,10 +23,18 @@
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.TestActivity" />
         <activity android:name=".activity.NinePatchActivity" />
-        <activity android:name=".activity.SingleInstanceActivity" />
-        <activity android:name=".activity.SingleTaskActivity" />
-        <activity android:name=".activity.SingleTopActivity" />
-        <activity android:name=".activity.StandardActivity" />
+        <activity
+            android:name=".activity.StandardActivity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".activity.SingleInstanceActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".activity.SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.SingleTopActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".activity.ViewPagerActivity" />
         <activity android:name=".activity.LaunchModeActivity" />
         <activity android:name=".activity.ScaleTypeActivity" />
@@ -49,7 +57,11 @@
         <activity android:name=".activity.GestureActivity" />
         <activity android:name=".activity.UpdateAndResultActivity" />
         <activity android:name=".activity.ResultActivity" />
-        <activity android:name=".activity.HandlerActivity"></activity>
+        <activity android:name=".activity.HandlerActivity" />
+        <activity android:name=".activity.Quiz3Activity" />
+        <activity android:name=".activity.ServiceBindActivity" />
+        <activity android:name=".activity.Quiz5Activity" />
+        <activity android:name=".activity.SQLiteActivity"></activity>
     </application>
 
 </manifest>

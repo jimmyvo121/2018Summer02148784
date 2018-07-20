@@ -107,6 +107,7 @@ public class GestureActivity extends BaseActivity implements View.OnTouchListene
             sumY=0;
             return super.onDown(e);
         }
+
         @Override
         public boolean onDoubleTap(MotionEvent e) {
             UtilLog.LogD("Gesture","onDoubleTap");
